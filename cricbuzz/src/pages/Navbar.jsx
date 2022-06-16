@@ -96,7 +96,7 @@ export const Navbar = () => {
               </Link>
             </Box>
             <Box display={{ base: "none", md: "flex" }} >
-              <Link to="">
+              <Link to="/news">
                 <Text color="white">News</Text>
               </Link>
             </Box>
