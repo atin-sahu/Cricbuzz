@@ -1,6 +1,7 @@
 import { Box, Divider, Flex, Heading, Tab, TabList, TabPanel, TabPanels, Tabs } from '@chakra-ui/react'
 import React from 'react'
-import { LatestPhotos } from '../../../news/LatestPhotos'
+import { LatestNews } from '../../../news/LatestNews';
+import { LatestPhotos } from '../../../news/LatestPhotos';
 import { Domestic } from './Domestic'
 import { International } from './International'
 
@@ -31,7 +32,7 @@ export const LiveNavbar = () => {
                             <Domestic></Domestic>
                         </Box>
                         <Box flex={4} bg='white'>
-                            <LatestPhotos></LatestPhotos>
+                            <LatestNews></LatestNews>
                         </Box>
                     </Flex>
                 </TabPanel>

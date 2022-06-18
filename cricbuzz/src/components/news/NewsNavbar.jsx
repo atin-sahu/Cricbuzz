@@ -1,11 +1,10 @@
 import { Box, Flex, SimpleGrid, Tab, TabList, TabPanel, TabPanels, Tabs } from '@chakra-ui/react'
 import React from 'react'
-import { Link } from 'react-router-dom'
 import { LatestPhotos } from './LatestPhotos'
 import { AllNews } from './AllNews'
 import { Topics } from './Topics'
 import { SpecialNews } from './SpecialNews'
-import { Interview } from './InterView'
+import { Interview } from './Interview'
 import { LiveBlog } from './LiveBlog'
 import { Cricbuzz } from './Cricbuzz'
 import { LatestNews } from './LatestNews'
@@ -42,10 +41,10 @@ export const NewsNavbar = () => {
                 <TabPanel p={0} mt={2}>
                     <Flex gap={1}>
                         <Box flex={8} bg='white' p={2}>
-                            <AllNews></AllNews>
+                            <Cricbuzz></Cricbuzz>
                         </Box>
                         <Box flex={4} bg='white' p={2}>
-                            <LatestPhotos></LatestPhotos>
+                            <LatestNews></LatestNews>
                         </Box>
                     </Flex>
                 </TabPanel>
@@ -62,7 +61,17 @@ export const NewsNavbar = () => {
                 <TabPanel p={0} mt={2}>
                     <Flex gap={1}>
                         <Box flex={8} bg='white' p={2}>
-                           <AllNews></AllNews>
+                           <Topics></Topics>
+                        </Box>
+                        <Box flex={4} bg='white' p={2}>
+                            <LatestNews></LatestNews>
+                        </Box>
+                    </Flex>
+                </TabPanel>
+                <TabPanel p={0} mt={2}>
+                    <Flex gap={1}>
+                        <Box flex={8} bg='white' p={2}>
+                            <Cricbuzz></Cricbuzz>
                         </Box>
                         <Box flex={4} bg='white' p={2}>
                             <LatestPhotos></LatestPhotos>
@@ -72,7 +81,17 @@ export const NewsNavbar = () => {
                 <TabPanel p={0} mt={2}>
                     <Flex gap={1}>
                         <Box flex={8} bg='white' p={2}>
-                            <AllNews></AllNews>
+                            <Interview></Interview>
+                        </Box>
+                        <Box flex={4} bg='white' p={2}>
+                            <LatestNews></LatestNews>
+                        </Box>
+                    </Flex>
+                </TabPanel>
+                <TabPanel p={0} mt={2}>
+                    <Flex gap={1}>
+                        <Box flex={8} bg='white' p={2}>
+                            <SpecialNews></SpecialNews>
                         </Box>
                         <Box flex={4} bg='white' p={2}>
                             <LatestPhotos></LatestPhotos>
@@ -82,7 +101,17 @@ export const NewsNavbar = () => {
                 <TabPanel p={0} mt={2}>
                     <Flex gap={1}>
                         <Box flex={8} bg='white' p={2}>
-                            <AllNews></AllNews>
+                            <LiveBlog></LiveBlog>
+                        </Box>
+                        <Box flex={4} bg='white' p={2}>
+                            <LatestNews></LatestNews>
+                        </Box>
+                    </Flex>
+                </TabPanel>
+                <TabPanel p={0} mt={2}>
+                    <Flex gap={1}>
+                        <Box flex={8} bg='white' p={2}>
+                           <Interview></Interview>
                         </Box>
                         <Box flex={4} bg='white' p={2}>
                             <LatestPhotos></LatestPhotos>
@@ -92,40 +121,10 @@ export const NewsNavbar = () => {
                 <TabPanel p={0} mt={2}>
                     <Flex gap={1}>
                         <Box flex={8} bg='white' p={2}>
-                            <AllNews></AllNews>
+                            <LiveBlog></LiveBlog>
                         </Box>
                         <Box flex={4} bg='white' p={2}>
-                            <LatestPhotos></LatestPhotos>
-                        </Box>
-                    </Flex>
-                </TabPanel>
-                <TabPanel p={0} mt={2}>
-                    <Flex gap={1}>
-                        <Box flex={8} bg='white' p={2}>
-                            <AllNews></AllNews>
-                        </Box>
-                        <Box flex={4} bg='white' p={2}>
-                           <LatestPhotos></LatestPhotos>
-                        </Box>
-                    </Flex>
-                </TabPanel>
-                <TabPanel p={0} mt={2}>
-                    <Flex gap={1}>
-                        <Box flex={8} bg='white' p={2}>
-                           <AllNews></AllNews>
-                        </Box>
-                        <Box flex={4} bg='white' p={2}>
-                            <LatestPhotos></LatestPhotos>
-                        </Box>
-                    </Flex>
-                </TabPanel>
-                <TabPanel p={0} mt={2}>
-                    <Flex gap={1}>
-                        <Box flex={8} bg='white' p={2}>
-                            <AllNews></AllNews>
-                        </Box>
-                        <Box flex={4} bg='white' p={2}>
-                           <LatestPhotos></LatestPhotos> 
+                            <LatestNews></LatestNews> 
                         </Box>
                     </Flex>
                 </TabPanel>

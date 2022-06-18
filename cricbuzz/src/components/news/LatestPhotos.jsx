@@ -23,48 +23,28 @@ export const LatestPhotos = () => {
 
     }
 
-    // useEffect(()=>{
-    //     getPhotos();
-    // },[])
+    useEffect(()=>{
+        getPhotos();
+    },[])
 
-//   return (
-//     <Box>
-//         <Heading size='lg' >LATEST PHOTOS</Heading>
-//         {photos.map((player)=>{
-//             return <Box key={player.imageId}>
-//                 <Link to='' >
-//                     <Flex gap={2} p={1}>
-//                         <Box flex={4}>
-//                             <Image src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRNRdnuP6tn4h6dsKpr9ZAdwISb1vjmXjYSRw&usqp=CAU'></Image>
-//                         </Box>
-//                         <Box flex={8}>
-//                             <Text noOfLines={2}>{player.caption}</Text>
-//                         </Box>
-//                     </Flex>   
-//                     <Divider mt={1} mb={1}></Divider>
-//                 </Link>
-//             </Box>
-//         })}
-//     </Box>
-//   )
-// }
-
-return (
+  return (
     <Box>
-        <Heading size='lg' >LATEST PHOTOS</Heading>
-        <Box>
-            <Link to='' >
-                <Flex gap={2} p={1}>
-                    <Box flex={4}>
-                        <Image src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRNRdnuP6tn4h6dsKpr9ZAdwISb1vjmXjYSRw&usqp=CAU'></Image>
-                    </Box>
-                    <Box flex={8}>
-                        <Text noOfLines={2}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum eius harum quam excepturi, exercitationem modi, ipsum qui deserunt est vitae sunt labore nesciunt ut inventore consequuntur molestias commodi, debitis saepe?</Text>
-                    </Box>
-                </Flex>   
-                <Divider mt={1} mb={1}></Divider>
-            </Link>
-        </Box>
+        <Heading size='lg' fontSize='2xl' >LATEST PHOTOS</Heading>
+        {photos.map((player)=>{
+            return <Box key={player.imageId}>
+                <Link to='' >
+                    <Flex gap={2} p={1}>
+                        <Box flex={4}>
+                            <Image src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRNRdnuP6tn4h6dsKpr9ZAdwISb1vjmXjYSRw&usqp=CAU'></Image>
+                        </Box>
+                        <Box flex={8}>
+                            <Text noOfLines={2}>{player.caption}</Text>
+                        </Box>
+                    </Flex>   
+                    <Divider mt={1} mb={1}></Divider>
+                </Link>
+            </Box>
+        })}
     </Box>
   )
 }

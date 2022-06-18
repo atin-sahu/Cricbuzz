@@ -11,14 +11,14 @@ export const LatestNews = () => {
     const getLatestNews = async ()=>{
         const data = await axios({
           method: 'GET',
-          url: 'https://unofficial-cricbuzz.p.rapidapi.com/news/get-categories',
+          url: 'https://cricbuzz-cricket.p.rapidapi.com/news/v1/cat',
           headers: {
             'X-RapidAPI-Key': 'b1233bd737mshb48e280eeb863f7p111f8djsn735cbb71628c',
-            'X-RapidAPI-Host': 'unofficial-cricbuzz.p.rapidapi.com'
+            'X-RapidAPI-Host': 'cricbuzz-cricket.p.rapidapi.com'
           }
         })
         .then((data)=>(data.data.storyType));
-        // console.log("LatestNews",data.data.storyType);
+        console.log("LatestNews",data);
         setLatestNews(data);
 
     }
@@ -29,16 +29,16 @@ export const LatestNews = () => {
 
   return (
     <Box>
-        <Heading size='lg' >LATEST NEWS</Heading>
+        <Heading size='lg' fontSize='2xl' >LATEST NEWS</Heading>
         {latestNews.map((news)=>{
             return <Box key={news.id}>
                 <Link to='' >
                     <Flex gap={2} p={1}>
                         <Box flex={4}>
-                            <Image src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRNRdnuP6tn4h6dsKpr9ZAdwISb1vjmXjYSRw&usqp=CAU'></Image>
+                            <Image src='https://static.toiimg.com/photo/msid-70221460/70221460.jpg'></Image>
                         </Box>
                         <Box flex={8}>
-                            <Text noOfLines={2}>{news.desc}</Text>
+                            <Text noOfLines={2}>{news.description}</Text>
                         </Box>
                     </Flex>   
                     <Divider mt={1} mb={1}></Divider>

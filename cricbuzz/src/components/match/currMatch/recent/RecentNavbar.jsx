@@ -1,7 +1,7 @@
 import { Box, Divider, Flex, Tab, TabList, TabPanel, TabPanels, Tabs } from '@chakra-ui/react'
 import React from 'react'
-import { Link } from 'react-router-dom'
-import { LatestPhotos } from '../../../news/LatestPhotos'
+import { LatestNews } from '../../../news/LatestNews';
+import { LatestPhotos } from '../../../news/LatestPhotos';
 import { Domestic } from './Domestic'
 import { International } from './International'
 import { League } from './League'
@@ -58,7 +58,7 @@ export const RecentNavbar = () => {
                             <Women></Women>
                         </Box>
                         <Box flex={4} bg='white'>
-                            <LatestPhotos></LatestPhotos>
+                            <LatestNews></LatestNews>
                         </Box>
                     </Flex>
                 </TabPanel>

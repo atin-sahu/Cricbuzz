@@ -17,13 +17,12 @@ import {
     const getCricbuzz = async () => {
       const data = await axios({
         method: "GET",
-        url: "https://unofficial-cricbuzz.p.rapidapi.com/news/list",
-        params: {categoryId: '21'},
+        url: "https://cricbuzz-cricket.p.rapidapi.com/news/v1/cat/21",
         headers: {
           "X-RapidAPI-Key": "b1233bd737mshb48e280eeb863f7p111f8djsn735cbb71628c",
-          "X-RapidAPI-Host": "unofficial-cricbuzz.p.rapidapi.com",
+          "X-RapidAPI-Host": "cricbuzz-cricket.p.rapidapi.com",
         },
-      }).then((data) => data.data.newsList);
+      }).then((data) =>  data.data.storyList);
       console.log("Cricbuzz news", data);
       setCricbuzz(data);
     };

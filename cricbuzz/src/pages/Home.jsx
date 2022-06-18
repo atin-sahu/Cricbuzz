@@ -2,6 +2,7 @@ import { Box, Flex, Heading, SimpleGrid, Text } from '@chakra-ui/react'
 import React from 'react'
 import { FeaturedMatches } from '../components/FeaturedMatches'
 import { AllNews } from '../components/news/AllNews'
+import { LatestNews } from '../components/news/LatestNews'
 import { LatestPhotos } from '../components/news/LatestPhotos'
 
 export const Home = () => {
@@ -30,7 +31,7 @@ export const Home = () => {
         </Box>
         <Flex mt={1} gap={1}>
           <Box  flex={4} bg='white'>
-            <Heading as="h1" size='md' color='teal' m={2}>LATEST NEWS</Heading>
+              <LatestNews></LatestNews>
               <LatestPhotos></LatestPhotos>
           </Box>
           <Box flex={8} bg='white' p={2}>

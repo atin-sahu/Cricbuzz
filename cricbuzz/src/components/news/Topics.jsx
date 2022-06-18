@@ -11,10 +11,10 @@ export const Topics = () => {
     const getTopics = async ()=>{
         const data = await axios({
                 method: 'GET',
-                url: 'https://unofficial-cricbuzz.p.rapidapi.com/news/get-topics',
+                url: 'https://cricbuzz-cricket.p.rapidapi.com/news/v1/topics',
                 headers: {
                     'X-RapidAPI-Key': 'b1233bd737mshb48e280eeb863f7p111f8djsn735cbb71628c',
-                    'X-RapidAPI-Host': 'unofficial-cricbuzz.p.rapidapi.com'
+                    'X-RapidAPI-Host': 'cricbuzz-cricket.p.rapidapi.com'
                 }
               })
         .then((data)=>(data.data.topics));
@@ -35,7 +35,7 @@ export const Topics = () => {
                 <Link to=''>
                     <Heading noOfLines={1} fontSize={'2xl'} >{tpc.headline}</Heading>
                 </Link>
-                <Text noOfLines={1} mt={2} mb={4}>{tpc.desc}</Text>
+                <Text noOfLines={1} mt={2} mb={4}>{tpc.description}</Text>
                 <Divider mt={2} mb={4}></Divider>
             </Box>
         })}
