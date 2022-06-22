@@ -71,37 +71,37 @@ export const Navbar = () => {
           justifyContent='space-evenly'
         >
             <Box display={{ base: "none", md: "flex" }} >
-              <Link to="">
+              <Link to="/match">
                 <Text color="white">Matches</Text>
               </Link>
             </Box>
             <Box display={{ base: "none", md: "flex" }} >
-              <Link to="">
+              <Link to="/series">
                 <Text color="white">Series</Text>
               </Link>
             </Box>
             <Box display={{ base: "none", md: "flex" }} >
-              <Link to="">
+              <Link to="/teams">
                 <Text color="white">Teams</Text>
               </Link>
             </Box>
             <Box display={{ base: "none", md: "flex" }} >
-              <Link to="">
+              <Link to="/">
                 <Text color="white">Venues</Text>
               </Link>
             </Box>
             <Box display={{ base: "none", md: "flex" }} >
-              <Link to="">
+              <Link to="/">
                 <Text color="white">Players</Text>
               </Link>
             </Box>
             <Box display={{ base: "none", md: "flex" }} >
-              <Link to="">
+              <Link to="/news">
                 <Text color="white">News</Text>
               </Link>
             </Box>
             <Box display={{ base: "none", md: "flex" }} >
-              <Link to="">
+              <Link to="/">
                 <Text color="white">Stats</Text>
               </Link>
             </Box>
@@ -121,7 +121,7 @@ export const Navbar = () => {
             </Link>
           </Box>
           <Box display='flex' >
-            <Link to='/'>
+            <Link to='/login'>
               <FaUser color='teal'></FaUser>
             </Link>
           </Box>
@@ -140,16 +140,7 @@ export const Navbar = () => {
             ml={9}
             alignItems="center"
           >
-            <Link to="">
-              <Text color="white">Matches</Text>
-            </Link>
-          </Box>
-          <Box
-            display={{ base: "none", md: "flex" }}
-            ml={9}
-            alignItems="center"
-          >
-            <Link to="">
+            <Link to="/match">
               <Text color="white">Matches</Text>
             </Link>
           </Box>
